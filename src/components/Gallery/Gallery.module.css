@@ -1,0 +1,15 @@
+.container {
+  margin: 1rem 30%;
+}
+
+@media screen and (max-width: 51.25em) {
+  .container {
+    margin: 1rem 10%;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .container {
+    margin: 1rem 10%;
+  }
+}

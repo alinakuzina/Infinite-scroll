@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navigation from "./components/Navigation/Navigation";
+import AnimalsPage from "./components/Pages/Animals";
+import FasionPage from "./components/Pages/Fasion";
+import FoodPage from "./components/Pages/Food";
+import NaturePage from "./components/Pages/Nature";
+import PeoplePage from "./components/Pages/People";
+import MainPage from "./components/Pages/Main";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation></Navigation>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/home" element={<MainPage />} />
+        <Route path="/animals" element={<AnimalsPage />} />
+        <Route path="/fashion" element={<FasionPage />} />
+        <Route path="/food" element={<FoodPage />} />
+        <Route path="/nature" element={<NaturePage />} />
+        <Route path="/people" element={<PeoplePage />} />
+      </Routes>
     </div>
   );
 }

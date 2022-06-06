@@ -1,0 +1,156 @@
+.navigation {
+}
+
+.checkbox {
+  display: none;
+}
+
+.button {
+  background-color: #faf9f8;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 1.8rem;
+  right: 2.5rem;
+  border-radius: 50%;
+  z-index: 2000;
+  border: 0.5px solid #383f3f;
+  /* box-shadow: 0 0.5rem 2rem #383f3f; */
+  text-align: center;
+  cursor: pointer;
+}
+
+.background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#3891a6, #383f3f);
+  position: fixed;
+  top: 2.5rem;
+  right: 3rem;
+  z-index: 1000;
+  transition: all 0.7s;
+}
+
+.list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  display: none;
+}
+
+.checkbox:checked ~ .nav .list {
+  display: flex;
+}
+
+.nav {
+  height: 100vh;
+  /* width: 100%; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  width: 0;
+  transition: all 0.7s;
+}
+
+.item {
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #faf9f8;
+  transition: all 0.5s;
+}
+
+.link:hover,
+.link:active {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.checkbox:checked ~ .background {
+  transform: scale(80);
+}
+
+.checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100vw;
+}
+
+.icon {
+  position: relative;
+  margin-top: 1.4rem;
+}
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #383f3f;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.icon::before {
+  top: -0.8rem;
+}
+
+.icon::after {
+  top: 0.8rem;
+}
+
+.button:hover .icon::before {
+  top: -1rem;
+}
+
+.button:hover .icon::after {
+  top: 1rem;
+}
+
+.checkbox:checked ~ .button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked ~ .button .icon::before {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.checkbox:checked ~ .button .icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
+
+@media screen and (max-width: 23.45em) {
+  .icon {
+    margin-right: 0.2rem;
+  }
+
+  .button {
+    right: 2rem;
+  }
+
+  .background {
+    right: 2.4rem;
+  }
+}
