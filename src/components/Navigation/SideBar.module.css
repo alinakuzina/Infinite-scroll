@@ -39,6 +39,7 @@
   flex-direction: column;
   gap: 1.7rem;
   display: none;
+  padding: 0;
 }
 
 .checkbox:checked ~ .nav .list {

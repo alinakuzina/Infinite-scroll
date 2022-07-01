@@ -44,15 +44,12 @@ let LoadImages = (props) => {
   useEffect(() => {
     if (loading === false) {
       getPhotos();
-
-      console.log("timer");
     }
   }, [startFatching]);
 
   //   Unsplash API
 
   const displayPhotos = function () {
-    console.log("display");
     for (let i = 0; i < photosArray.length; i++) {
       photosReady.push({
         id: photosArray[i].id,

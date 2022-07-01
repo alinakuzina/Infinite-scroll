@@ -15,6 +15,7 @@ function App() {
       <Navigation></Navigation>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/index.html" element={<MainPage />} />
         <Route path="/home" element={<MainPage />} />
         <Route path="/animals" element={<AnimalsPage />} />
         <Route path="/fashion" element={<FasionPage />} />
