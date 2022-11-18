@@ -9,6 +9,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
+  width: 100vw;
   max-height: -webkit-fill-available;
   font-family: Nothing You Could Do, sanf-serif;
   background-color: #faf9f8;
